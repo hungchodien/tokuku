@@ -1,0 +1,158 @@
+
+.concept img{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+#recruit .thumbnail2 p{
+    width: 100%;
+}
+div {
+    margin-bottom:2px;
+}
+
+input{
+    margin-bottom:4px;
+}
+.modal-header{
+    background-color: transparent!important;
+}
+.modal-content{
+    border-radius: 0!important;
+}
+.modal-body{
+    padding: 4px!important;
+    border-radius: 0!important;
+}
+.modal-body button{
+    position: absolute!important;
+    background-color: white!important;
+    right: 4px!important;
+    top: -20px!important;
+    opacity: 1;
+}
+.access table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.access td,.access th {
+    border: 1px solid #aaa;
+    text-align: left;
+    padding: 8px;
+}
+
+.access .bgdddd{
+    background-color: #dddddd;
+}
+
+
+.top0{
+    top:0;
+}
+.left0{
+    left: 0;
+}
+.right0{
+    right: 0;
+}
+.bottom0{
+    bottom: 0;
+}
+.minH100{
+    min-height: 100px;
+}
+.top10{
+    top: 10px;
+}
+.w390{
+    width: 390px;
+}
+.h30{
+    height: 30px;
+}
+
+.w70pi{
+    width: 70%!important;
+}
+.maxW100{
+    max-width: 100px;
+}
+.w20pi{
+    width: 20%!important;
+}
+.mgR0i{
+    margin-right: 0px!important;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .mgL12SMB{
+        margin-left: 12px;
+    }
+    .maxH60SMB{
+        max-height: 60px;
+    }
+    .mgR12SMB{
+        margin-right: 12px;
+    }
+    .w70pSMB{
+        width: 70% !important;
+    }
+}
+@media screen and (min-width:500px) and (max-width:767px) {
+    .mgL12LMB{
+        margin-left: 12px;
+    }
+    .mgR12LMB{
+        margin-right: 12px;
+    }
+    .w70pLMB{
+        width: 70% !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px)  {
+    .w70pSTL{
+        width: 70% !important;
+    }
+}
+@media screen and (min-width:991px) and (max-width:1200px)  {
+    .w70pLTL{
+        width: 70% !important;
+    }
+}
+@media only screen and (min-width: 1201px) {
+    .w70pPC{
+        width: 70% !important;
+    }
+    .w100pPC{
+        width: 100% !important;
+    }
+}
+
+/******************************************************************************************/
+.minH40{
+    min-height: 40px;
+}
+.share-icon a{
+    height: 100%;
+}
+.pdT10i{
+    padding-top: 10px!important;
+}
+#primary-menu-custom-new{
+    padding: 0;
+    margin: 0;
+}
+#primary-menu-custom-new ul{
+    display: table;
+    width: calc(100% - 200px);
+    padding: 0;
+    margin: 0;
+    min-height: 50px;
+}
+#primary-menu-custom-new li{
+    display: table-cell;
+    padding: 15px;
+}
