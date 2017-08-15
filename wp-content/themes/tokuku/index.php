@@ -87,7 +87,7 @@
 国内外の多くの皆様にとって東北の魅力を知り、実際に訪れるきっかけとなることを願っています。
 ぜひ、皆様も東北を訪れ、その魅力を台家してください。
             </span>
-            <div class="content clear">
+            <div class="content">
                 <?php $terms = get_terms( array(
                     'taxonomy' => 'tourirt-tokuku-area',
                     'hide_empty' => false,  ) );
@@ -103,10 +103,35 @@
                     endif;
                     //////////////////////////////resize ảnh ;;;;;
                     //$mobile = ($key%2 == 0? "le" : "chan");
+                    $classPc = $key %3 ;
+                    switch ($classPc) {
+                        case 0:
+                            $classPc = "leftPC";
+                            break;
+                        case 1:
+                            $classPc = "centerPC";
+                        break;
+                        case 2:
+                            $classPc = "rightPC";
+                        break;
+                        default:
+                            $classPc = "";
+                    }
+                    $classMb = $key %2 ;
+                    switch ($classMb) {
+                        case 0:
+                            $classMb = "leftMb";
+                            break;
+                        case 1:
+                            $classMb = "rightMb";
+                            break;
+                        default:
+                            $classMb = "";
+                    }
                     ?>
-                    <div class="<?php echo ($key%3 == 0 ? "content_img_box $mobile clear": ($key % 3 == 1? "content_img_box $mobile clear" : "content_img_box $mobile clear"));?>">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 <?php echo $classPc." ".$classMb; ?> box-content-img">
                         <img src="<?php echo $image; ?>" alt="<?php echo $term->name ?>">
-                        <p class="title_area clear">
+                        <p class="title_area <?php echo "title_area".$classPc." title_area".$classMb; ?> clear">
                             <a class="box" href="<?php echo get_term_link($term->slug, 'tourirt-tokuku-area'); ?>">
                                 <?php echo $term->name; ?>
                             </a>
@@ -122,7 +147,7 @@
             <div class="submit-button-img" >
                 <input class="button-submit-final-input button-submit-final-input-blue" type="submit" value="上記の条件で検索">
             </div>
-            <div class="hotel-introduce" style="display: none!important;">
+            <div class="hotel-introduce">
                 <h2 class="infor-hotel-content">
                     さらにお得なクーポン情報！
                 </h2>

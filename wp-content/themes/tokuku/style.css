@@ -922,14 +922,12 @@ footer {
 }
 .content .title_area{
     opacity: 0.7;
-    width: 100%;
     position: absolute;
     bottom: 0;
     text-align: left;
     font-size: 14px;
     color: black;
     background-color: #003366;
-    border: 1px solid #ccc;
 }
 .content .title_area a.box{
     margin-top: 14px;
@@ -958,45 +956,47 @@ footer {
 .content {
     padding-bottom: 20px;
 }
+.content .leftPC {
+    padding-left: 0;
+    padding-right: 7px;
+}
+.content .title_arealeftPC {
+    width: calc(100% - 7px);
+}
+.content .centerPC{
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+.content .title_areacenterPC{
+    width: calc(100% - 6px);
+}
+.content .rightPC{
+    padding-left: 7px;
+    padding-right: 0;
+}
+.content .title_arearightPC{
+    width: calc(100% - 7px);
+}
+@media screen and (max-width: 767px){
+    .content .leftMb {
+        padding-left: 0;
+        padding-right: 7px;
+    }
+    .content .title_arealeftMb, .content .title_arearightMb {
+        width: calc(100% - 7px);
+    }
+    .content .rightMb{
+        padding-left: 7px;
+        padding-right: 0px;
+    }
+}
+.box-content-img{
+    margin-bottom: 10px;
+}
 
 
-.infor-hotel-content {
-    padding: 37px 0 37px 0px;
-}
-h2.infor-hotel-content{
-    font-size: 26px;
-    text-align: center;
-
-    margin: 0 auto;
-}
-.img-3div{
-    background-color: #e0e0e0;
-    display: block;
-    text-align: left;
-    max-width: 454px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.description-hotel{
-    max-width: calc(100% - 454px);
-}
-.description-hotel-text{
-    margin-top: 58px;
-    padding-bottom: 38px;
-    margin-left: 38px;
-    font-size: 20px;
-    color: black;
-}
-.img-3div .largest{
-    width:264px;
-    height: 264px;
-    float: left;
-}
-.img-3div .medium, .img-3div .small{
-    width: 190px;
-    height: 132px;
-    float: left;
-}
+/*****************************/
 
 
 
