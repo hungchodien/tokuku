@@ -73,14 +73,7 @@
                 $(this).height( $(this).width() / tile);
             });
         });
-        $(".img-3div .largest").each(function(){
-            $(this).height($(this).width());
-        });
-        $( window ).resize(function() {
-            $(".img-3div .largest").each(function(){
-                $(this).height($(this).width());
-            });
-        });
+
     });
 </script>
 </body>

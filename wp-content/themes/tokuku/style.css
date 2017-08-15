@@ -20,11 +20,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* container setup 980*/
-@media only screen and (min-width: 992px){
-    .container {
-        max-width: 980px;
-    }
-}
+
 
 /* setup hr*/
 hr{
@@ -689,7 +685,7 @@ footer {
 @media screen and (max-width:767px) {
     .Co_use_cupcard_title{
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 33px;
     }
 }
 .tbale_co_company{
@@ -742,6 +738,10 @@ footer {
         padding-top: 25px;
         padding-bottom: 40px;
     }
+    .search-ajax {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 }
 
 .select-search-ajax {
@@ -780,7 +780,14 @@ footer {
     padding-bottom: 32px;
 }
 .submit-button-img{
+    padding-top: 20px;
     padding-bottom: 84px;
+}
+@media screen and (max-width: 767px){
+    .submit-button-img{
+        padding-top: 20px;
+        padding-bottom: 45px;
+    }
 }
 .submit-button-img-hotel{
     padding-bottom: 0px;
@@ -808,6 +815,11 @@ footer {
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     position: relative;
     margin: 0 auto;
+}
+@media screen and (max-width: 360px){
+    .button-submit-final-input{
+        width: 200px;
+    }
 }
 .button-submit-final-input-red{
     background-color: rgb(212, 27, 38);
@@ -872,134 +884,88 @@ footer {
     margin-left: 73px;
     color: black;
 }
-
-.content_img_box{
-    width: calc(33.3333% - 7px);
-    overflow: hidden;
-    position: relative;
-}
-.content .content_img_box:nth-child(3n + 1){
-    float: left;
-    margin-right: 5px;
-    margin-left: 0;
-    margin-bottom: 10px;
-}
-.content .content_img_box:nth-child(3n + 2){
-    float: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-.content .content_img_box:nth-child(3n + 3){
-     float: left;
-    margin-left: 5px;
-    margin-right: 0;
-    margin-bottom: 10px;
- }
-.content img {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-@media screen and (max-width: 991px){
-    .content_img_box{
-        width: calc(50% - 5px);
-        overflow: hidden;
-    }
-    .content .content_img_box:nth-child(2n + 1){
-        float: left;
-        margin-right: 5px;
-        margin-left: 0;
-        margin-bottom: 10px;
-        clear: both;
-    }
-    .content .content_img_box:nth-child(2n + 2){
-        float: right;
-        margin-left: 5px;
-        margin-right: 0px;
-        margin-bottom: 10px;
-    }
-}
-.content .title_area{
-    opacity: 0.7;
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    font-size: 14px;
-    color: black;
-    background-color: #003366;
-}
-.content .title_area a.box{
-    margin-top: 14px;
-    margin-bottom: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
-    height: 26px;
-    background-color: white;
-    border-radius: 30px;
-    margin-left: 14px;
-    color: black;
-    opacity: 1;
-}
-.content .character{
-    color: white;
-    /* padding-top: 6px; */
-    margin-top: 10px;
-    font-size: 20px!important;
-    /* margin-bottom: -20px; */
-    display: inline-block;
-    float: right;
-    clear: both;
-    margin-right: 20px;
-}
-.content {
-    padding-bottom: 20px;
-}
-.content .leftPC {
-    padding-left: 0;
-    padding-right: 7px;
-}
-.content .title_arealeftPC {
-    width: calc(100% - 7px);
-}
-.content .centerPC{
-    padding-left: 3px;
-    padding-right: 3px;
-
-}
-.content .title_areacenterPC{
-    width: calc(100% - 6px);
-}
-.content .rightPC{
-    padding-left: 7px;
-    padding-right: 0;
-}
-.content .title_arearightPC{
-    width: calc(100% - 7px);
-}
 @media screen and (max-width: 767px){
-    .content .leftMb {
-        padding-left: 0;
-        padding-right: 7px;
+    .tour_infor .description{
+        margin-right: 9px;
+        margin-left: 9px;
     }
-    .content .title_arealeftMb, .content .title_arearightMb {
-        width: calc(100% - 7px);
+}
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1010px;
     }
-    .content .rightMb{
-        padding-left: 7px;
-        padding-right: 0px;
-    }
+}
+
+/**** hotel *************************/
+.infor-hotel-content{
+    font-size: 26px;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 32px;
 }
 .box-content-img{
+    padding: 0 5px;
+    position: relative;
+}
+.box-content-img{
+    padding: 0 5px;
+    position: relative;
     margin-bottom: 10px;
 }
+.title_area{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: calc(100% - 10px);
+    min-height: 54px;
+    opacity: 0.7;
+}
+.title_area:before{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #0000ff;
+    color: white;
 
+}
+.title_area:after{
+    display: block;
+    position: absolute;
+    right: 4%;
+    top:24%;
+    transform: translateX(-50%);
+    content: ">";
+    background-color: #0000ff;
+    color: white;
 
-/*****************************/
+}
 
-
-
+.title_area a{
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1000000000000;
+    display: block;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px;
+    background-color: white;
+    color: black;
+}
+.content{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+@media screen and (max-width: 767px){
+    .content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
 
 /* Style The Dropdown Button */
 .dropdown .area {
@@ -1041,4 +1007,67 @@ footer {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .area {
     background-color: white;
+}
+
+/*********************************************/
+.img-3div{
+    width: 486px;
+}
+.description-hotel{
+    padding-left: 5px;
+    padding-top: 60px;
+    margin-right: -15px;
+    font-size: 20px;
+}
+@media screen and (max-width: 991px) and (min-width: 767px){
+    .img-3div{
+        width: 48%;
+    }
+    .S-img-3div{
+        width: 52%;
+    }
+    .description-hotel{
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.description-hotel-text{
+    padding-bottom: 35px;
+}
+.del-pading{
+    padding: 0;
+}
+.img-3div .largest{
+    width: 58.1%;
+}
+.img-3div .medium , .img-3div .small{
+    width: 41.9%;
+}
+.img-3div img{
+    width: 100%;
+}
+@media screen and (max-width: 767px){
+    .img-3div{
+        width: calc(100% );
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .S-img-3div{
+        width: 100%;
+    }
+    .description-hotel-text{
+        padding-bottom: 32px;
+    }
+    .infor-hotel-content {
+        padding-top: 35px;
+        margin-bottom: 26px;
+    }
+    .description-hotel{
+        padding-top: 24px;
+        font-size: 23px;
+    }
+    .hotel-introduce{
+        padding-bottom: 38px;
+    }
 }
