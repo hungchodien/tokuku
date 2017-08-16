@@ -21,56 +21,73 @@
                     } ?>
                 </div>
                 <div class="button-submit-final mobile" >
-                    <input class="button-submit-final-input button-submit-final-input-red" type="submit" value="すべての企業リストを見る">
+                    <input class="button-submit-final-input button-submit-final-input-red" id="search-ajjax-company" type="submit" value="すべての企業リストを見る">
                 </div>
             </div>
-
-            <div class="search-ajax" id="search-ajjax-company">
+            <div class="search-ajax" >
                 <p class="title">地域、業種などで条件を絞り、検索することができます。</p>
-                <div class="select-search-ajax">
-                    <div class="dropdown dropdown-ajax">
-                        <button class="area"
-                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            地域を選択
-                            <span class="caret"></span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Another action 1</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                <div class="row">
+                    <div class="swap-3-selectbox">
+                        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 swap-select-box-ajax-search">
+                            <select class="form-control select-box-ajax-data " id="area">
+                                <?php
+                                ///load all area
+                                $terms = get_terms( array(
+                                    'taxonomy' => 'tourirt-tokuku-area',
+                                    'hide_empty' => false,  ) );
+                                foreach($terms as $key => $term){
+                                    ?>
+                                    <option data-id-area="<?php echo $term->term_id ;?>" value="<?php echo $term->term_id ;?>"><?php echo $term->name; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
-                    </div>
-                    <div class="dropdown dropdown-ajax">
-                        <button class="category"
-                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            業種カテゴリーを選択
-                            <span class="caret"></span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action2</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 swap-select-box-ajax-search">
+                            <select class="form-control select-box-ajax-data " id="area">
+
+                                <?php
+                                ///load all area
+                                $terms = get_terms( array(
+                                    'taxonomy' => 'tourirt-tokuku-category',
+                                    'hide_empty' => false,  ) );
+                                foreach($terms as $key => $term){
+                                    ?>
+                                    <option data-id-area="<?php echo $term->term_id ;?>" value="<?php echo $term->term_id ;?>">
+                                        <?php echo $term->name; ?>
+                                    </option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
-                    </div>
-                    <div class="dropdown dropdown-ajax">
-                        <button class=" company"
-                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            企業を選択
-                            <span class="caret"></span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action3</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12  swap-select-box-ajax-search right">
+                            <select class="form-control select-box-ajax-data " id="area">
+                                <?php
+                                $args = array(
+                                    'post_type' => 'cong-ty',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'tourirt-tokuku-category',
+                                            'operator' => 'EXISTS'
+                                        ),
+                                    ),
+                                );
+                                $query = new WP_Query( $args );
+                                foreach ($query->posts as $key => $value){
+                                    ?>
+                                    <option data-id-area="" value=""><?php echo $value->post_title ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
 
                 </div>
+                <div class="ajax-success"></div>
                 <div class="button-submit-final" >
-                    <input class="button-submit-final-input button-submit-final-input-red" type="submit" value="上記の条件で検索">
+                    <input class="button-submit-final-input button-submit-final-input-red" id="Search-company" type="submit" value="上記の条件で検索">
                 </div>
             </div>
         </div>
@@ -145,17 +162,20 @@
         <div class="submit-button-img" >
             <input class="button-submit-final-input button-submit-final-input-blue" type="submit" value="上記の条件で検索">
         </div>
-        <div class="hotel-introduce">
-            <h2 class="infor-hotel-content">
-                さらにお得なクーポン情報！
-            </h2>
-            <div class="row">
-                <div class="img-3div col-md-6 col-xs-12">
-                    <?php $img_hotel = json_decode(do_shortcode(' [tdrSlider slug="hotel_img_introduce" option="1" width="980" height="320" order="DESC" orderby="date"]')) ;?>
-                    <?php
-                    $keyh = 0;
-                    ?>
-                    <div class="clear">
+    </div>
+</div>
+<div class="hotel-introduce">
+    <div class="container">
+        <h2 class="infor-hotel-content">
+            さらにお得なクーポン情報！
+        </h2>
+        <div class="row">
+            <div class="img-3div col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                <?php $img_hotel = json_decode(do_shortcode(' [tdrSlider slug="hotel_img_introduce" option="1" width="980" height="320" order="DESC" orderby="date"]')) ;?>
+                <?php
+                $keyh = 0;
+                ?>
+                <div class="clear">
                     <?php
                     foreach ($img_hotel as $key => $img_hotels){
                         if(!empty($img_hotels)){
@@ -173,30 +193,30 @@
                             endif;
                             $keyh++;
                             ?>
-                                <div class="   <?php echo ($key == 1 ?"largest fl":($key == 2 ? "medium fl":"small fl"));?>" >
-                                    <img src="<?php echo $image;?>" alt="">
-                                </div>
+                            <div class="   <?php echo ($key == 1 ?"largest fl":($key == 2 ? "medium fl":"small fl"));?>" >
+                                <img src="<?php echo $image;?>" alt="">
+                            </div>
                             <?php
                         }
                     }
                     ?>
-                    </div>
                 </div>
-                <div class="S-img-3div col-md-6 col-xs-12">
-                    <div class="description-hotel">
-                        <div class="description-hotel-text clear">
-                            東北地方の対象ホテルにて宿泊のお客様において、
-                            税込10,000円以上の銀聯カードをご利用の際に
-                            1会計辺り1,000円OFF！
-                        </div>
-                        <div class="submit-button-img-hotel clear" >
-                            <input class="button-submit-final-input button-submit-final-input-green" type="submit" value="もっと詳しく見る">
-                        </div>
+            </div>
+            <div class="S-img-3div  col-lg-6 col-sm-6  col-md-6 col-xs-12">
+                <div class="description-hotel">
+                    <div class="description-hotel-text clear">
+                        東北地方の対象ホテルにて宿泊のお客様において、
+                        税込10,000円以上の銀聯カードをご利用の際に
+                        1会計辺り1,000円OFF！
+                    </div>
+                    <div class="submit-button-img-hotel clear" >
+                        <input class="button-submit-final-input button-submit-final-input-green" type="submit" value="もっと詳しく見る">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>
 

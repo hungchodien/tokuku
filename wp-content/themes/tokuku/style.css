@@ -918,7 +918,6 @@ footer {
     display: block;
     width: calc(100% - 10px);
     min-height: 54px;
-    opacity: 0.7;
 }
 .title_area:before{
     display: block;
@@ -927,7 +926,8 @@ footer {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #0000ff;
+    background-color: #003676;
+    opacity: 0.7;
     color: white;
 
 }
@@ -938,7 +938,7 @@ footer {
     top:24%;
     transform: translateX(-50%);
     content: ">";
-    background-color: #0000ff;
+    background-color: #003676;
     color: white;
 
 }
@@ -1010,8 +1010,10 @@ footer {
 }
 
 /*********************************************/
-.img-3div{
-    width: 486px;
+@media  screen and (min-width: 1200px) {
+    .img-3div{
+        width: 486px;
+    }
 }
 .description-hotel{
     padding-left: 5px;
@@ -1022,9 +1024,6 @@ footer {
 @media screen and (max-width: 991px) and (min-width: 767px){
     .img-3div{
         width: 48%;
-    }
-    .S-img-3div{
-        width: 52%;
     }
     .description-hotel{
         margin-top: 0;
@@ -1070,4 +1069,57 @@ footer {
     .hotel-introduce{
         padding-bottom: 38px;
     }
+}
+.select-box-ajax-data{
+    height: 46px;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: 0 0 5px rgb(212, 27, 38);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.search-ajax .select-box-ajax-data {
+    width: 100%;
+}
+.search-ajax .swap-3-selectbox .swap-select-box-ajax-search:after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    color: rgb(212, 27, 38);
+    background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+
+    .search-ajax .swap-3-selectbox .swap-select-box-ajax-search:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        color: rgb(212, 27, 38);
+        background-color: transparent;
+    }
+}
+.search-ajax .swap-3-selectbox .right:after{
+    content: "";
+}
+.marginLR0{
+    margin-right: 0;
+    margin-left: 0;
+}
+.swap-3-selectbox{
+    margin-right: 30px;
+    padding-left: 30px;
+    position: relative;
+}
+.swap-select-box-ajax-search{
+    margin-bottom: 32px;
 }

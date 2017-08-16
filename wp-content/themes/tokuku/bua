@@ -1,0 +1,91 @@
+<div class="dropdown dropdown-ajax">
+                        <button class="area"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            地域を選択
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <?php
+                            ///load all area
+                            $terms = get_terms( array(
+                                'taxonomy' => 'tourirt-tokuku-area',
+                                'hide_empty' => false,  ) );
+                            foreach($terms as $key => $term){
+                                ?>
+                                <a class="dropdown-item change-text-button term-area-ajax" href="javascript:void(0);"
+                                   data-id-area="<?php echo $term->term_id ;?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-ajax">
+                        <button class="category"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            業種カテゴリーを選択
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <?php
+                            ///load all area
+                            $terms = get_terms( array(
+                                'taxonomy' => 'tourirt-tokuku-category',
+                                'hide_empty' => false,  ) );
+                            foreach($terms as $key => $term){
+                                ?>
+                                <a class="dropdown-item change-text-button term-category-ajax" href="javascript:void(0);"
+                                   data-id-area="<?php echo $term->term_id ;?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-ajax">
+                        <button class=" company"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            企業を選択
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="javascript:void(0);" style="background-color: #a0a5aa;">chọn công ty</a>
+                            <?php
+                            $args = array(
+                                'post_type' => 'cong-ty',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'tourirt-tokuku-category',
+                                        'operator' => 'EXISTS'
+                                    ),
+                                ),
+                            );
+                            $query = new WP_Query( $args );
+                            foreach ($query->posts as $key => $value){
+                                ?>
+                                <a class="dropdown-item change-text-button" href="javascript:void(0);"><?php echo $value->post_title ?></a>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+
+<select class="form-control" id="area">
+                        <?php
+                        ///load all area
+                        $terms = get_terms( array(
+                            'taxonomy' => 'tourirt-tokuku-area',
+                            'hide_empty' => false,  ) );
+                        foreach($terms as $key => $term){
+                            ?>
+                            <option data-id-area="<?php echo $term->term_id ;?>"><?php echo $term->name; ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>

@@ -37,31 +37,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <script
-        src="http://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <!--[if lt IE 9]>
+
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/selectivizr.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/css3-mediaqueries.js" type="text/javascript"></script>
-    <![endif]-->
-    <!--[if lt IE 10]>
+
+    <?php wp_head(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/matchMedia.js" type="text/javascript"></script>
     <![endif]-->
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/customslider.js"></script>
 
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slider-primary/jquery.fadeImg.js"></script>
     <link rel="stylesheet" href = "<?php echo get_template_directory_uri(); ?>/style.css">
-    <?php wp_head(); ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
 
 </head>
 <body <?php body_class(); ?>>
@@ -89,6 +83,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
             <option>Việt nammese</option>
         </select>
     </div>
+    <input id="ajax_request" value="<?php echo get_option('home') ?>/wp-admin/admin-ajax.php" type="hidden"/>
 </header><!-- .site-header -->
 
 <section id="slider-primary">

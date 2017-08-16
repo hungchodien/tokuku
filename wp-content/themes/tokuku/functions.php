@@ -1,9 +1,9 @@
 <?php
 
-//if ( ! function_exists( 'aq_resize' ) ) {
-//include( get_template_directory() . '/inc/aq_rezise.php' );
-require_once('inc/aq_resizer.php');
-//}
+if ( ! function_exists( 'aq_resize' ) ) {
+include( get_template_directory() . '/inc/aq_rezise.php' );
+    require_once('inc/aq_resizer.php');
+}
 if ( ! function_exists( 'theme_setup' ) ) :
     function theme_setup() {
         load_theme_textdomain( 'wpTDR', get_template_directory() . '/languages' );
@@ -12,7 +12,6 @@ if ( ! function_exists( 'theme_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus( array(
-            'Top-menus-Toggle' => __('Menu chính' , 'wpTDR'),
             'top-menu' => __('Top Menu','wpTDR'),
             'footer-menu1' => __('Footer Menu 1','wpTDR'),
             'footer-menu2' => __('Footer Menu 2','wpTDR'),
@@ -32,6 +31,11 @@ if ( ! function_exists( 'theme_setup' ) ) :
             'default-color'      => $default_color,
             'default-attachment' => 'fixed',
         )));
+
+
+
+
+
     }
 endif; // setup theme
 
@@ -72,6 +76,7 @@ function wpTDR_scripts() {
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'awsome-font-css', get_template_directory_uri() . '/css/font-awesome.min.css' );
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'),true );
+
     wp_enqueue_script('lazyload_min-js', get_template_directory_uri() . '/js/jquery.lazyload.min.js', array('jquery'), true);
     wp_enqueue_script('lazyscript_min-js', get_template_directory_uri() . '/js/jquery.lazyscript.min.js', array('jquery'), true);
     wp_enqueue_script('nivoslider-js', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery'), true);
@@ -117,6 +122,15 @@ function taxonomy_news_queries( $query ) {
 }
 add_action( 'pre_get_posts', 'taxonomy_news_queries' );
 
+add_action('in_admin_header', 'my_ajax_button');
+
+function mysss_action_ajax() {
+    return "aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+    die();
+}
+add_action('wp_ajax_mysss_action_ajax1', 'mysss_action_ajax');
+add_action('wp_ajax_nopriv_mysss_action_ajax1', 'mysss_action_ajax');
+
 
 function getThumbnailUrl($postID) {
     $imgID = get_post_thumbnail_id($postID); // l?y id c?a hình
@@ -149,10 +163,11 @@ function template_chooser($template)
 add_filter('template_include', 'template_chooser');
 
 class CSS_Menu_Maker_Walker extends Walker {
+
     var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
     function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class='dropdown-menu' >\n";
+        $output .= "\n$indent<ul>\n";
     }
     function end_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
@@ -171,24 +186,21 @@ class CSS_Menu_Maker_Walker extends Walker {
         /* Check for children */
         $children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
         if (!empty($children)) {
-            $classes[] = 'has-sub dropdown';
-            $caret = '&nbsp;<span class="caret"></span>';
-            $dropdowntoggleTagA = ' class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" 
-		aria-expanded="false" ';
+            $classes[] = 'has-sub';
         }
         $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
         $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
         $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-        $output .= $indent . '<li ' . $id . $value . $class_names .'>';
+        $output .= $indent . '<li' . $id . $value . $class_names .'>';
         $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
         $item_output = $args->before;
-        $item_output .= '<a   '.$dropdowntoggleTagA. $attributes .'><span>';
+        $item_output .= '<a'. $attributes .'><span>';
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-        $item_output .= "</span>$caret</a>";
+        $item_output .= '</span></a>';
         $item_output .= $args->after;
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
@@ -197,10 +209,7 @@ class CSS_Menu_Maker_Walker extends Walker {
     }
 
 }
-function custom_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 
 add_action( 'init', 'add_excerpts_to_pages' );
 function add_excerpts_to_pages() {
@@ -264,106 +273,40 @@ function ik_pagination($html) {
 
 
 
-function page_nav2() {
 
-    if( is_singular() )
-        return;
 
-    global $wp_query;
 
-    /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 ) return; $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1; $max = intval( $wp_query->max_num_pages );
 
-    /** Add current page to the array */
-    if ( $paged >= 1 )
-        $links[] = $paged;
 
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
+
+
+
+
+
+
+
+
+
+function excerpts ($length=200, $trailing='..')
+{
+    if(has_excerpt()):
+        $str=strip_tags(get_the_excerpt());
+    else:
+        $str=strip_tags(get_the_content());
+    endif;
+    $length-=mb_strlen($trailing);
+    if (mb_strlen($str)> $length)
+    {
+        return mb_strimwidth($str,0,$length,$trailing,'utf-8');
     }
-
-    if ( ( $paged + 2 ) <= $max ) {
-        $links[] = $paged + 2;
-        $links[] = $paged + 1;
-    }
-
-    echo '
-<div class="navigation">
-<ul>' . "\n";
-
-    /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '
-<li>%s</li>
- 
-' . "\n", get_previous_posts_link('<< Trước') );
-
-    /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
-        $class = 1 == $paged ? ' class="active"' : '';
-
-        printf( '<li%s><a href="%s">%s</a></li>
- 
-' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-        if ( ! in_array( 2, $links ) )
-            echo '
-<li>…</li>
- 
-';
-    }
-
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>
- 
-' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-    }
-
-    /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
-            echo '
-<li>…</li>
- 
-' . "\n";
-
-        $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>
- 
-' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-    }
-
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '
-<li>%s</li>
- 
-' . "\n", get_next_posts_link('Sau >>') );
-
-    echo '</ul>
-</div>
- 
-' . "\n";
-
-}
-
-add_action( 'wp_footer', 'dvd_action_javascript' );
-
-
-
-
-
-function my_action() {
-    //echo $_POST['data'];
-    if(isset($_POST['data']))
-        echo get_option_minhnn($_POST['data']);
     else
-        echo "éo có gì ";
-
-    die();
+    {
+        $res = $str;
+    }
+    return $res;
 }
+
+
+
+
+

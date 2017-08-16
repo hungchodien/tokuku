@@ -12,31 +12,29 @@
 
 <?php wp_footer(); ?>
 <script type="text/javascript">
-//    jQuery(document).ready(function ($) {
-//        $("img.lazy-load").lazyload({
-//            effect : "fadeIn"
-//        });
-//
-//        var options = {
-//            type: "delay",
-//            time: 1000,
-//            scripts: [
-//                "https://connect.facebook.net/en_EN/all.js#xfbml=1",
-//                "https://apis.google.com/js/plusone.js",
-//                "https://platform.twitter.com/widgets.js",
-//                "https://static.mixi.jp/js/share.js",
-//                "https://b.st-hatena.com/js/bookmark_button.js"
-//            ],
-//            success: function () {
-//                FB.init({ appId: '899176063532614', status: true, cookie: true, xfbml: true });
-//            }
-//        };
-//        $.lazyscript(options);
-//
-//    });
+    jQuery(document).ready(function ($) {
+        $("img.lazy-load").lazyload({
+            effect : "fadeIn"
+        });
 
+        var options = {
+            type: "delay",
+            time: 1000,
+            scripts: [
+                "https://connect.facebook.net/en_EN/all.js#xfbml=1",
+                "https://apis.google.com/js/plusone.js",
+                "https://platform.twitter.com/widgets.js",
+                "https://static.mixi.jp/js/share.js",
+                "https://b.st-hatena.com/js/bookmark_button.js"
+            ],
+            success: function () {
+                FB.init({ appId: '899176063532614', status: true, cookie: true, xfbml: true });
+            }
+        };
+        $.lazyscript(options);
 
-    /*************************************/
+    });
+
 </script>
 <script>
     jQuery(document).ready(function($) {
@@ -71,6 +69,25 @@
             $(".content .collum").each(function(){
                 var tile = 365/243;
                 $(this).height( $(this).width() / tile);
+            });
+        });
+        ////
+        //console.log(1111111111111);
+        $(".button-submit-final-input-red").click(function(){
+            var url_ajax=$('#ajax_request').val();
+            $.ajax({
+
+                type : 'POST',
+                dataType:'html',
+                data : ({
+                    'action': 'mysss_action_ajax1',
+                    'var' : 'ten_thuong_hieu'
+                }),
+                url : url_ajax,
+                success: function(data) {
+                    $('.ajax-success').html(data);
+                    //console.log(resp);
+                }
             });
         });
 
