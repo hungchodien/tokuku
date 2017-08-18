@@ -1,3 +1,6 @@
+= 1.8.2 =
+* Bug fix: registration warning was shown for free plugins
+
 = 1.8.1 =
 * Fixed a bug potentially making the downloads list under the Commercial not display correctly
 

@@ -76,7 +76,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
         </a>
         <span>
                     企業リスト　観光情報　お得クーポン
-                </span>
+
+        </span>
         <select class="form-control" id="sel1">
             <option selected >日本語</option>
             <option>english</option>
@@ -85,7 +86,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     </div>
     <input id="ajax_request" value="<?php echo get_option('home') ?>/wp-admin/admin-ajax.php" type="hidden"/>
 </header><!-- .site-header -->
-
 <section id="slider-primary">
     <div class="wrap">
         <div class="slide">

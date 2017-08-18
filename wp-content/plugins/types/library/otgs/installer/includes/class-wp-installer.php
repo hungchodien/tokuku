@@ -2107,7 +2107,7 @@ final class WP_Installer {
 							     )
 							) {
 
-								if ( $download['slug'] == 'types' || ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) ) {
+								if ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) {
 									return false; // use data from wordpress.org
 								}
 
@@ -2183,7 +2183,7 @@ final class WP_Installer {
 
 								$download = $this->settings['repositories'][ $repository_id ]['data']['downloads']['plugins'][ $plugin_slug ];
 
-								if ( $download['slug'] == 'types' || ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) ) {
+								if ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) {
 									continue;
 								}
 
@@ -2255,8 +2255,7 @@ final class WP_Installer {
 						foreach ( $product['plugins'] as $plugin_slug ) {
 
 							$download = $this->settings['repositories'][ $repository_id ]['data']['downloads']['plugins'][ $plugin_slug ];
-
-							if ( $download['slug'] == 'types' || ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) ) {
+							if ( ! empty( $download['free-on-wporg'] ) && $download['channel'] == WP_Installer_Channels::CHANNEL_PRODUCTION ) {
 								continue;
 							}
 

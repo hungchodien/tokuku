@@ -6,8 +6,8 @@ Text Domain: wpcf
 Domain Path: /embedded/locale
 License: GPLv2
 Requires at least: 3.7
-Tested up to: 4.8
-Stable tag: 2.2.15
+Tested up to: 4.8.1
+Stable tag: 2.2.15.1
 
 The complete and reliable plugin for managing custom post types, custom taxonomies and custom fields.
 
@@ -157,6 +157,9 @@ Additionally, Types is the only plugin that lets you define parent/child relatio
 10. Bulk editing child content using Field Tables
 
 == Changelog ==
+
+= 2.2.15.1 =
+* Fixed a bug that caused WCML to request registration in order to receive updates.
 
 = 2.2.15 =
 * Fixed a bug that caused Types to request registration in order to receive updates.
