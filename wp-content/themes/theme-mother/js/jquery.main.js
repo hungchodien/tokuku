@@ -2,6 +2,8 @@
 
 //var $=jQuery;
 jQuery(document).ready(function($) {
+
+
 	
 	// scroll body to 0px on click
 	// hide #back-top first
@@ -301,6 +303,28 @@ jQuery(document).ready(function($) {
 			
 		}
 	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 });
 

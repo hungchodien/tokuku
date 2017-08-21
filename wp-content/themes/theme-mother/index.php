@@ -94,9 +94,9 @@
                         <form role="search" method="post" id="searchform" class="searchform" action="<?php echo get_search_link( 'cong-ty' ); ?>">
                             <div>
                                 <label style="display: none" class="screen-reader-text" for="s">Search for:</label>
-                                <input type="hidden" value="sdfsdf dgfdg" name="s" id="s" />
-                                <input type="hidden" value="dgdffhfg  dgd  dfgdfgdf" name="nganh-form" id="nganh-form" />
-                                <input type="hidden" value="dgdffb la bla gdf" name="vung-form" id="vung-form" />
+                                <input type="hidden" value="" name="s" id="s" />
+                                <input type="hidden" value="-1" name="nganh-form" id="nganh-form" />
+                                <input type="hidden" value="-1" name="vung-form" id="vung-form" />
                                 <input type="submit" value="上記の条件で検索" class="button-submit-final-input button-submit-final-input-red" id="Search" />
                             </div>
                         </form>
@@ -161,19 +161,22 @@
                 }
                 ?>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 <?php echo $classPc." ".$classMb; ?> box-content-img">
-                    <img src="<?php echo $image; ?>" alt="<?php echo $term->name ?>">
-                    <p class="title_area <?php echo "title_area".$classPc." title_area".$classMb; ?>">
-                        <a class="box" href="<?php echo get_term_link($term->slug, 'tourirt-tokuku-area'); ?>">
-                            <?php echo $term->name; ?>
-                        </a>
-                    </p>
+                    <a class="box" href="<?php echo get_term_link($term->slug, 'tourirt-tokuku-area'); ?>">
+                        <img src="<?php echo $image; ?>" alt="<?php echo $term->name ?>">
+                        <p class="title_area <?php echo "title_area".$classPc." title_area".$classMb; ?>">
+                            <em><?php echo $term->name; ?></em>
+                        </p>
+                    </a>
                 </div>
                 <?php
             }
             ?>
         </div>
         <div class="submit-button-img" >
-            <input class="button-submit-final-input button-submit-final-input-blue" type="submit" value="上記の条件で検索">
+
+            <a class="button-submit-final-input button-submit-final-input-blue" href="<?php
+
+            ?>">上記の条件で検索</a>
         </div>
     </div>
 </div>

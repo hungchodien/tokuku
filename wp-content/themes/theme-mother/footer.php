@@ -39,6 +39,10 @@
 <script>
     jQuery(document).ready(function($) {
 
+
+
+
+
         $(".slide").fadeImages({
             //arrows: true,
             complete: function() {
@@ -71,25 +75,7 @@
                 $(this).height( $(this).width() / tile);
             });
         });
-        ////
-        //console.log(1111111111111);
-        $(".button-submit-final-input-red").click(function(){
-            var url_ajax=$('#ajax_request').val();
-            $.ajax({
 
-                type : 'POST',
-                dataType:'html',
-                data : ({
-                    'action': 'mysss_action_ajax1',
-                    'var' : 'ten_thuong_hieu'
-                }),
-                url : url_ajax,
-                success: function(data) {
-                    $('.ajax-success').html(data);
-                    //console.log(resp);
-                }
-            });
-        });
         $('select#area').change(function() {
             var url_ajax=$('#ajax_request').val();
             var name_group = 'swap-3-selectbox';
@@ -110,8 +96,7 @@
                 url : url_ajax,
                 success: function(data) {
                     $('select#company').html(data['congty']);
-                    $('select#nganh').html(data['nganh']);
-                    console.log(data);
+                    //$('select#nganh').html(data['nganh']);
                     $("#vung-form").val($("select#area option:selected").val());
                     $("#nganh-form").val($("select#nganh option:selected").val());
                 }
@@ -139,7 +124,7 @@
                 url : url_ajax,
                 success: function(data) {
                     $('select#company').html(data['congty']);
-                    console.log(data);
+                    //console.log(data);
                     $("#vung-form").val($("select#area option:selected").val());
                     $("#nganh-form").val($("select#nganh option:selected").val());
                 }
@@ -148,6 +133,98 @@
         $('select#company').on('change', function() {
             var selected = this.value;
             window.location.replace(selected);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var field_custom_height = $("#field-custom-page-search");
+        field_custom_height.height(
+            function(){
+                if($(this).width()/$(this).parent().width() <0.5){
+                    ///ddaay laf lg-4
+                    var field_custom_height_class = $(".field-custom");
+                    var height_max = 0;
+                    field_custom_height_class.each(function(){
+                        var indexx = $(this).index() + 1;
+                        if(height_max < $(this).height())
+                            height_max = $(this).height();
+                        if(indexx %3 === 0 ){
+                            for(var i = indexx - 3 ; i < indexx ; i++){
+                                field_custom_height_class.eq(i).find('.swap-img-description-search').height(height_max);
+                            }
+                            height_max = 0;
+                        }
+                        if(indexx === field_custom_height_class.length){
+                            if(indexx % 3 === 2){
+                                //alert(height_max);
+                                //height_max = ( field_custom_height_class.eq(indexx -1).height() < field_custom_height_class.eq(indexx-2).height()?  field_custom_height_class.eq(indexx -1).height() :  field_custom_height_class.eq(indexx).height() );
+                                //alert(height_max);
+                                field_custom_height_class.eq(indexx-1).find('.swap-img-description-search').height(height_max);
+                                field_custom_height_class.eq(indexx - 2 ).find('.swap-img-description-search').height(height_max);
+                            }else{
+                                return false;
+                            }
+
+                        }
+                    });
+                }else{
+                    ///day laf width 100%
+
+                }
+            }
+        );
+        $( window ).resize(function() {
+            var field_custom_height = $("#field-custom-page-search");
+            field_custom_height.height(
+                function(){
+                    if($(this).width()/$(this).parent().width() <0.5){
+                        ///ddaay laf lg-4
+                        var field_custom_height_class = $(".field-custom");
+                        var height_max = 0;
+                        field_custom_height_class.each(function(){
+                            var indexx = $(this).index() + 1;
+                            if(height_max < $(this).height())
+                                height_max = $(this).height();
+                            if(indexx %3 === 0 ){
+                                for(var i = indexx - 3 ; i < indexx ; i++){
+                                    field_custom_height_class.eq(i).find('.swap-img-description-search').height(height_max);
+                                }
+                                height_max = 0;
+                            }
+                            if(indexx === field_custom_height_class.length){
+                                if(indexx % 3 === 2){
+                                    //alert(height_max);
+                                    //height_max = ( field_custom_height_class.eq(indexx -1).height() < field_custom_height_class.eq(indexx-2).height()?  field_custom_height_class.eq(indexx -1).height() :  field_custom_height_class.eq(indexx).height() );
+                                    //alert(height_max);
+                                    field_custom_height_class.eq(indexx-1).find('.swap-img-description-search').height(height_max);
+                                    field_custom_height_class.eq(indexx - 2 ).find('.swap-img-description-search').height(height_max);
+                                }else{
+                                    return false;
+                                }
+
+                            }
+                        });
+                    }else{
+                        ///day laf width 100%
+
+                    }
+                }
+            );
         });
 
     });

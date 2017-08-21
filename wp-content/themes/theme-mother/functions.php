@@ -12,7 +12,7 @@ function xulidulieuAreaNganhCompany() {
         /// nếu là area : nganh + company
         /// nếu company : -> lọc các company thuộc nganh + lọc các area trong company.
         /// nếu bấm vào company chuyển trang.
-        ///
+        //
         if($type_option == 'area'){
             if($id == -1 ){
                 $args = array(
@@ -67,7 +67,7 @@ function xulidulieuAreaNganhCompany() {
                 );
                 $loop_area = new WP_Query($args);
                 $id_company_arr = array();
-                $strCompany_return = '';
+                $strCompany_return = '<option value="-1"> chọn công ty</option>';
                 if($loop_area->have_posts()){
                     $key = 0;
                     while ($loop_area->have_posts()){
@@ -133,7 +133,7 @@ function xulidulieuAreaNganhCompany() {
                 }
                 $loop_nganh = new WP_Query($args);
                 $id_company_arr = array();
-                $strCompany_return = '';
+                $strCompany_return = '<option value="-1"> chọn công ty</option>';
                 if($loop_nganh->have_posts()){
                     $key = 0;
                     while ($loop_nganh->have_posts()){
