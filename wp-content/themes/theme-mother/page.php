@@ -3,6 +3,7 @@
         <div class="container clear">
             <div class="row">
                 <div class="main_content col-sm-9 col-sm-push-3">
+                    1234
                     <?php while ( have_posts() ) : the_post();?>
 
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

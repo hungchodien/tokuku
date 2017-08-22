@@ -174,9 +174,7 @@
         </div>
         <div class="submit-button-img" >
 
-            <a class="button-submit-final-input button-submit-final-input-blue" href="<?php
-
-            ?>">上記の条件で検索</a>
+            <a href="<?php echo get_option('home') ?>/all-tourist/"><input class="button-submit-final-input button-submit-final-input-blue" type="submit" value="上記の条件で検索"></a>
         </div>
     </div>
 </div>

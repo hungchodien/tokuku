@@ -2,6 +2,85 @@
 
 //var $=jQuery;
 jQuery(document).ready(function($) {
+    window.onload = function(){
+        var field_custom_height = $("#field-custom-page-search");
+        field_custom_height.height(
+            function(){
+                if($(this).width()/$(this).parent().width() <0.5){
+                    ///ddaay laf lg-4
+                    var field_custom_height_class = $(".field-custom");
+                    var height_max = 0;
+                    field_custom_height_class.each(function(){
+                        var indexx = $(this).index() + 1;
+                        if(height_max < $(this).height())
+                            height_max = $(this).height();
+                        if(indexx %3 === 0 ){
+                            for(var i = indexx - 3 ; i < indexx ; i++){
+                                field_custom_height_class.eq(i).find('.swap-img-description-search').height(height_max);
+                            }
+                            height_max = 0;
+                        }
+                        if(indexx === field_custom_height_class.length){
+                            if(indexx % 3 === 2){
+                                //alert(height_max);
+                                //height_max = ( field_custom_height_class.eq(indexx -1).height() < field_custom_height_class.eq(indexx-2).height()?  field_custom_height_class.eq(indexx -1).height() :  field_custom_height_class.eq(indexx).height() );
+                                //alert(height_max);
+                                field_custom_height_class.eq(indexx-1).find('.swap-img-description-search').height(height_max);
+                                field_custom_height_class.eq(indexx - 2 ).find('.swap-img-description-search').height(height_max);
+                            }else{
+                                return false;
+                            }
+
+                        }
+                    });
+                }else{
+                    ///day laf width 100%
+
+                }
+            }
+        );
+        $( window ).resize(function() {
+            var field_custom_height = $("#field-custom-page-search");
+            field_custom_height.height(
+                function(){
+                    if($(this).width()/$(this).parent().width() <0.5){
+                        ///ddaay laf lg-4
+                        var field_custom_height_class = $(".field-custom");
+                        var height_max = 0;
+                        field_custom_height_class.each(function(){
+                            var indexx = $(this).index() + 1;
+                            if(height_max < $(this).height())
+                                height_max = $(this).height();
+                            if(indexx %3 === 0 ){
+                                for(var i = indexx - 3 ; i < indexx ; i++){
+                                    field_custom_height_class.eq(i).find('.swap-img-description-search').height(height_max);
+                                }
+                                height_max = 0;
+                            }
+                            if(indexx === field_custom_height_class.length){
+                                if(indexx % 3 === 2){
+                                    //alert(height_max);
+                                    //height_max = ( field_custom_height_class.eq(indexx -1).height() < field_custom_height_class.eq(indexx-2).height()?  field_custom_height_class.eq(indexx -1).height() :  field_custom_height_class.eq(indexx).height() );
+                                    //alert(height_max);
+                                    field_custom_height_class.eq(indexx-1).find('.swap-img-description-search').height(height_max);
+                                    field_custom_height_class.eq(indexx - 2 ).find('.swap-img-description-search').height(height_max);
+                                }else{
+                                    return false;
+                                }
+
+                            }
+                        });
+                    }else{
+                        ///day laf width 100%
+
+                    }
+                }
+            );
+        });
+	};
+
+
+
 
 
 	

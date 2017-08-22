@@ -37,7 +37,7 @@ get_header(); ?>
                     'post_type' => 'tourist',
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'tourirt-tokuku-area',
+                            'taxonomy' => $term->taxonomy,
                             'field' => 'id',
                             'terms' => $term->term_id,
                             'operator' => 'in'
@@ -71,17 +71,24 @@ get_header(); ?>
                                         <?php
                                         if(isset($_POST['vung-form']) && $_POST['vung-form'] != -1) {
                                             $term = get_term($_POST['vung-form']);
+
                                             ?>
                                             <h6 class="vung">
-                                                <?php echo $term->name; ?>
+                                                <a href="<?php echo get_term_link($term[$i]->term_id , 'tourirt-tokuku-area'); ?>">
+                                                    <?php echo $term[$i]->name; ?>
+                                                </a>
                                             </h6>
                                             <?php
                                         }else{
                                             $term = get_the_terms($loop_area->post->ID, 'tourirt-tokuku-area');
+
                                             for($i = 0 ; $i < count($term) ; $i ++){
                                                 ?>
                                                 <h6 class="vung">
-                                                    <?php echo $term[$i]->name; ?>
+                                                    <a href="<?php echo get_term_link($term[$i]->term_id , 'tourirt-tokuku-area'); ?>">
+                                                        <?php echo $term[$i]->name; ?>
+                                                    </a>
+
                                                 </h6>
                                                 <?php
                                             }
@@ -93,7 +100,9 @@ get_header(); ?>
                                             $term = get_term($_POST['nganh-form']);
                                             ?>
                                             <h6 class="nganh">
-                                                <?php echo $term->name; ?>
+                                                <a href="<?php echo get_term_link($term[$i]->term_id , 'tourirt-tokuku-category'); ?>">
+                                                    <?php echo $term[$i]->name; ?>
+                                                </a>
                                             </h6>
                                             <?php
                                         }else{
@@ -102,7 +111,9 @@ get_header(); ?>
                                                 $term_color = types_render_termmeta("color", array( "term_id" => $term_arr_cat[$i]->term_id  ));
                                                 ?>
                                                 <h6 class="nganh" style="color: #<?php echo $term_color; ?>; border-color: #<?php echo $term_color; ?>">
-                                                    <?php echo $term_arr_cat[$i]->name; ?>
+                                                    <a style="color: #<?php echo $term_color; ?>; ?>" href="<?php echo get_term_link($term_arr_cat[$i]->term_id , 'tourirt-tokuku-category'); ?>">
+                                                        <?php echo $term_arr_cat[$i]->name; ?>
+                                                    </a>
                                                 </h6>
                                                 <?php
                                             }
@@ -111,7 +122,7 @@ get_header(); ?>
 
                                     </div>
                                     <div class="company-name">
-                                        <?php echo $loop_area->post->post_title; ?>
+                                        <a href="<?php echo get_permalink($loop_area->post->ID); ?>"><?php echo $loop_area->post->post_title; ?></a>
                                     </div>
                                     <div class="event-description">
                                         <?php echo $loop_area->post->post_excerpt; ?>
