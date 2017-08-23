@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2c327c5-e803-47e9-a13f-0c5ea04fcd5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/img/promotion-content-co.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/img/promotion-content.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/img/promotion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/page-sales-promotion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/js/jquery.main.js" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/js/jquery.main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php" afterPath="$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php" />
     </list>
@@ -26,8 +26,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="112" column="53" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="53" />
+            <state relative-caret-position="221">
+              <caret line="133" column="22" lean-forward="true" selection-start-line="128" selection-start-column="16" selection-end-line="133" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -36,9 +36,21 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="1281" column="30" lean-forward="false" selection-start-line="1281" selection-start-column="30" selection-end-line="1281" selection-end-column="30" />
+            <state relative-caret-position="441">
+              <caret line="1598" column="24" lean-forward="false" selection-start-line="1598" selection-start-column="24" selection-end-line="1598" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-sales-promotion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/page-sales-promotion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="60" column="54" lean-forward="false" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,12 +58,9 @@
       <file leaf-file-name="taxonomy.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#h6#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,30 +68,32 @@
       <file leaf-file-name="content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+            <state relative-caret-position="135">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-tourist.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single-tourist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="118" column="115" lean-forward="false" selection-start-line="118" selection-start-column="115" selection-end-line="118" selection-end-column="115" />
+            <state relative-caret-position="204">
+              <caret line="12" column="70" lean-forward="true" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
               <folding>
-                <element signature="n#style#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#2;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1503456089582" expanded="true" signature="172:265" ph="..." />
+                <marker date="1503456089582" expanded="true" signature="785:848" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-all-tourist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1496">
+              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,19 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>button-submit-final-input button-submit-final-input-red</find>
-      <find>add_action</find>
-      <find>#ajax_request</find>
-      <find>ajax_request</find>
-      <find>op</find>
-      <find>ajax-success</find>
-      <find>description-hotel</find>
-      <find>tra</find>
-      <find>field-custom</find>
-      <find>box</find>
-      <find>.box</find>
-      <find>title_area a</find>
-      <find>.title_area:after</find>
       <find>left-footer</find>
       <find>line</find>
       <find>.except</find>
@@ -129,6 +127,19 @@
       <find>dia-diem-tourist-page</find>
       <find>img-po</find>
       <find>get_post_meta</find>
+      <find>.line span:nth-child(1):after, .line span:nth-child(2):after</find>
+      <find>promotion-content-description</find>
+      <find>promotion-content-descriptio</find>
+      <find>promotion-footer-description</find>
+      <find>promotion-header</find>
+      <find>promotion-box</find>
+      <find>promotion-title img</find>
+      <find>promotion-title</find>
+      <find>.promotion-content-description</find>
+      <find>promotion-title .promotion-header</find>
+      <find>.promotion-footer-description</find>
+      <find>promotion-footer</find>
+      <find>promotion-content-absolute</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,13 +167,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/js/jquery.main.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/page-khuyen-mai.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/theme-mother/page-sales-promotion.php" />
       </list>
     </option>
   </component>
@@ -195,7 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,6 +277,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,15 +286,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TH" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\theme-mother" />
-      <recent name="F:\xampp\htdocs\tokuku\wp-content\plugins" />
-      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\theme-mother\img" />
-      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\tokuku" />
-      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\tokuku\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\tokuku\js\ajax" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\theme-mother\img" />
+      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\theme-mother" />
+      <recent name="F:\xampp\htdocs\tokuku\wp-content\plugins" />
+      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\tokuku" />
+      <recent name="F:\xampp\htdocs\tokuku\wp-content\themes\tokuku\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -388,18 +401,20 @@
       <workItem from="1503020497049" duration="27431000" />
       <workItem from="1503279292058" duration="28879000" />
       <workItem from="1503365388420" duration="24265000" />
+      <workItem from="1503452422767" duration="28309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263402000" />
+    <option name="totallyTimeSpent" value="291711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -429,13 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/tokuku/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="89" lean-forward="false" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/tokuku/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2244">
@@ -565,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,15 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="79" column="6" lean-forward="false" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,56 +716,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/page-all-tourist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#h6#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h6#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        <state relative-caret-position="-1496">
+          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="1281" column="30" lean-forward="false" selection-start-line="1281" selection-start-column="30" selection-end-line="1281" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="112" column="53" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="53" />
+        <state relative-caret-position="441">
+          <caret line="1598" column="24" lean-forward="false" selection-start-line="1598" selection-start-column="24" selection-end-line="1598" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/single-tourist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="118" column="115" lean-forward="false" selection-start-line="118" selection-start-column="115" selection-end-line="118" selection-end-column="115" />
+        <state relative-caret-position="204">
+          <caret line="12" column="70" lean-forward="true" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
           <folding>
-            <element signature="n#style#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1503456089582" expanded="true" signature="172:265" ph="..." />
+            <marker date="1503456089582" expanded="true" signature="785:848" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/taxonomy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="133" column="22" lean-forward="true" selection-start-line="128" selection-start-column="16" selection-end-line="133" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/theme-mother/page-sales-promotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="60" column="54" lean-forward="false" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

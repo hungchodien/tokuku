@@ -10,7 +10,14 @@
 
 get_header(); ?>
 <div class="line">
-    <span>ホーム </span><span> 観光情報 </span><span> 青森県 </span>
+    <span>ホーム </span><span>
+    <?php
+        echo get_page_link('118');
+    ?>
+
+    </span><span>
+        <?php the_title(); ?>
+    </span>
 </div>
 <div class="container">
     <div class="row option-width-row taxonomy-page">

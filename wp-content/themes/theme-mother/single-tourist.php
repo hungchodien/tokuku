@@ -1,6 +1,16 @@
 <?php get_header(); ?>
+<?php $queried_object = get_queried_object(); ?>
 <div class="line">
-    <span>ホーム </span><span> 観光情報 </span><span> 福島県 </span><span> スパリゾートハワイアンズ </span>
+    <span> <a href="<?php echo get_option('home'); ?>">ホーム </a> </span>
+    <span><?php
+        $query = new WP_Query( array( 'page_id' => 118 ) );
+        ?>
+        <a href="<?php echo get_permalink($query->post->ID); ?>">
+            <?php echo $query->post->post_name; ?>
+        </a>
+    </span>
+    <span><a href="#"><?php $vung =  get_the_terms($queried_object->ID, 'tourirt-tokuku-area'); echo $vung[0]->name; ?></a></span>
+    <span> <a href="<?php echo get_permalink(get_the_ID()); ?>"><?php the_title(); ?></a> </span>
 </div>
 <div class="container" id="detail-torist-page">
     <div class="row rs" >
@@ -12,8 +22,6 @@
             </div>
             <div class="text-description">
                 <?php
-                $queried_object = get_queried_object();
-
                 $vung = get_the_terms($queried_object->ID, 'tourirt-tokuku-area');
                 $nganh = get_the_terms($queried_object->ID, 'tourirt-tokuku-category');
                 ?>

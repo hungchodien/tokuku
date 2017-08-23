@@ -225,7 +225,9 @@
                         <?php echo get_option_minhnn('description_hotel'); ?>
                     </div>
                     <div class="submit-button-img-hotel clear" >
+                        <a href="<?php echo get_option('home') ?>/sales-promotion">
                         <input class="button-submit-final-input button-submit-final-input-green" type="submit" value="もっと詳しく見る">
+                        </a>
                     </div>
                 </div>
             </div>
